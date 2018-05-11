@@ -1,12 +1,15 @@
 package items.instruments;
 
-public abstract class Instrument implements IPlay {
+import items.Item;
+
+public abstract class Instrument extends Item implements IPlay {
 
     private String material;
     private String colour;
     private InstrumentFamily family;
 
-    public Instrument(String material, String colour, InstrumentFamily family) {
+    public Instrument(String material, String colour, InstrumentFamily family, Double buyPrice, Double sellPrice) {
+        super(buyPrice, sellPrice);
         this.material = material;
         this.colour = colour;
         this.family = family;

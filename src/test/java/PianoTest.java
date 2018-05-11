@@ -12,7 +12,7 @@ public class PianoTest {
 
     @Before
     public void before() throws Exception {
-        piano = new Piano(PianoType.GRAND, "Wood", "Black");
+        piano = new Piano(PianoType.GRAND, "Wood", "Black", 5.0, 10.0);
     }
 
     @Test
@@ -38,5 +38,10 @@ public class PianoTest {
     @Test
     public void hasInstrumentFamily() {
         assertEquals(InstrumentFamily.KEYBOARD, piano.getFamily());
+    }
+
+    @Test
+    public void hasBuyPrice() {
+        assertEquals(5.0, piano.getBuyPrice(), 0.1);
     }
 }

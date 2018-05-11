@@ -12,7 +12,7 @@ public class GuitarTest {
 
     @Before
     public void before() throws Exception {
-        guitar = new Guitar("Wood", "White", GuitarType.ELECTRICSIXSTRING);
+        guitar = new Guitar("Wood", "White", GuitarType.ELECTRICSIXSTRING, 5.0, 10.0);
     }
 
     @Test
@@ -43,5 +43,10 @@ public class GuitarTest {
     @Test
     public void hasFamily() {
         assertEquals(InstrumentFamily.GUITAR, guitar.getFamily());
+    }
+
+    @Test
+    public void hasBuyPrice() {
+        assertEquals(5.0, guitar.getBuyPrice(), 0.1);
     }
 }

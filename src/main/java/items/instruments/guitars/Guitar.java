@@ -7,8 +7,8 @@ public class Guitar extends Instrument {
     
     private GuitarType type;
 
-    public Guitar(String material, String colour, GuitarType type) {
-        super(material, colour, InstrumentFamily.GUITAR);
+    public Guitar(String material, String colour, GuitarType type, Double buyPrice, Double sellPrice) {
+        super(material, colour, InstrumentFamily.GUITAR, buyPrice, sellPrice);
         this.type = type;
     }
 
