@@ -17,4 +17,8 @@ public class Shop {
     public String getName() {
         return name;
     }
+
+    public int stockCount() {
+        return stock.size();
+    }
 }
