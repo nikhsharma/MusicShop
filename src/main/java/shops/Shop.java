@@ -21,4 +21,8 @@ public class Shop {
     public int stockCount() {
         return stock.size();
     }
+
+    public void addStock(ISell product) {
+        stock.add(product);
+    }
 }
