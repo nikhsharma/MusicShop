@@ -1,6 +1,7 @@
 package shops;
 
 import items.ISell;
+import items.Item;
 import items.accessories.DrumSticks;
 
 import java.util.ArrayList;
@@ -67,6 +68,14 @@ public class Shop {
         return profit;
     }
 
+    public Double calculateIncome() {
+        Double income = 0.0;
+        for (ISell product : sold) {
+             income += ((Item) product).getSellPrice();
+        }
+        return income;
+    }
+
     public int soldCount() {
         return sold.size();
     }
@@ -74,5 +83,10 @@ public class Shop {
     public void sellProduct(ISell product) {
         stock.remove(product);
         sold.add(product);
+    }
+
+    public void endOfDay() {
+        this.money += calculateIncome();
+        this.sold.clear();
     }
 }
