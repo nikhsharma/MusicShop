@@ -81,8 +81,10 @@ public class Shop {
     }
 
     public void sellProduct(ISell product) {
-        stock.remove(product);
-        sold.add(product);
+        if (stock.contains(product)) {
+            stock.remove(product);
+            sold.add(product);
+        }
     }
 
     public Double endOfDay() {

@@ -98,5 +98,14 @@ public class ShopTest {
         assertEquals(5.0, shop.getMoney(), 0.1);
     }
 
+    @Test
+    public void cantSellProductIfNotInStock() {
+        shop.addStock(sticks);
+        shop.sellProduct(sticks);
+        shop.sellProduct(sticks);
+        assertEquals(1, shop.soldCount());
+        assertEquals(0, shop.stockCount());
+    }
+
 
 }
