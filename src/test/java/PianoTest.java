@@ -11,7 +11,7 @@ public class PianoTest {
 
     @Before
     public void before() throws Exception {
-        piano = new Piano(PianoType.GRAND);
+        piano = new Piano("Wood", PianoType.GRAND);
     }
 
     @Test
@@ -22,5 +22,10 @@ public class PianoTest {
     @Test
     public void hasType() {
         assertEquals(PianoType.GRAND, piano.getType());
+    }
+
+    @Test
+    public void hasMaterial() {
+        assertEquals("Wood", piano.getMaterial());
     }
 }

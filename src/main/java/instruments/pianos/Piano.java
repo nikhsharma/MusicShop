@@ -6,7 +6,8 @@ public class Piano extends Instrument {
 
     private PianoType type;
 
-    public Piano(PianoType type) {
+    public Piano(String material, PianoType type) {
+        super(material);
         this.type = type;
     }
 
