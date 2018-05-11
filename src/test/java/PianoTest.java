@@ -1,3 +1,4 @@
+import instruments.InstrumentFamily;
 import instruments.pianos.Piano;
 import instruments.pianos.PianoType;
 import org.junit.Before;
@@ -11,7 +12,7 @@ public class PianoTest {
 
     @Before
     public void before() throws Exception {
-        piano = new Piano("Wood", "Black", PianoType.GRAND);
+        piano = new Piano(PianoType.GRAND, "Wood", "Black");
     }
 
     @Test
@@ -32,5 +33,10 @@ public class PianoTest {
     @Test
     public void hasColour() {
         assertEquals("Black", piano.getColour());
+    }
+
+    @Test
+    public void hasInstrumentFamily() {
+        assertEquals(InstrumentFamily.KEYBOARD, piano.getFamily());
     }
 }

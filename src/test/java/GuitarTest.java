@@ -1,3 +1,4 @@
+import instruments.InstrumentFamily;
 import instruments.guitars.Guitar;
 import instruments.guitars.GuitarType;
 import org.junit.Before;
@@ -37,5 +38,10 @@ public class GuitarTest {
     @Test
     public void hasColour() {
         assertEquals("White", guitar.getColour());
+    }
+
+    @Test
+    public void hasFamily() {
+        assertEquals(InstrumentFamily.GUITAR, guitar.getFamily());
     }
 }

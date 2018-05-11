@@ -1,13 +1,14 @@
 package instruments.pianos;
 
 import instruments.Instrument;
+import instruments.InstrumentFamily;
 
 public class Piano extends Instrument {
 
     private PianoType type;
 
-    public Piano(String material, String colour, PianoType type) {
-        super(material, colour);
+    public Piano(PianoType type, String material, String colour) {
+        super(material, colour, InstrumentFamily.KEYBOARD);
         this.type = type;
     }
 

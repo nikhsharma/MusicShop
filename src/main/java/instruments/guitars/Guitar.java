@@ -1,13 +1,14 @@
 package instruments.guitars;
 
 import instruments.Instrument;
+import instruments.InstrumentFamily;
 
 public class Guitar extends Instrument {
     
     private GuitarType type;
 
     public Guitar(String material, String colour, GuitarType type) {
-        super(material, colour);
+        super(material, colour, InstrumentFamily.GUITAR);
         this.type = type;
     }
 

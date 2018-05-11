@@ -4,10 +4,12 @@ public abstract class Instrument {
 
     private String material;
     private String colour;
+    private InstrumentFamily family;
 
-    public Instrument(String material, String colour) {
+    public Instrument(String material, String colour, InstrumentFamily family) {
         this.material = material;
         this.colour = colour;
+        this.family = family;
     }
 
     public String getMaterial() {
@@ -16,5 +18,9 @@ public abstract class Instrument {
 
     public String getColour() {
         return colour;
+    }
+
+    public InstrumentFamily getFamily() {
+        return family;
     }
 }
