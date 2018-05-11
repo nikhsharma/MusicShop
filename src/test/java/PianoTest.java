@@ -11,7 +11,7 @@ public class PianoTest {
 
     @Before
     public void before() throws Exception {
-        piano = new Piano("Wood", PianoType.GRAND);
+        piano = new Piano("Wood", "Black", PianoType.GRAND);
     }
 
     @Test
@@ -27,5 +27,10 @@ public class PianoTest {
     @Test
     public void hasMaterial() {
         assertEquals("Wood", piano.getMaterial());
+    }
+
+    @Test
+    public void hasColour() {
+        assertEquals("Black", piano.getColour());
     }
 }

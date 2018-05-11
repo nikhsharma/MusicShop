@@ -11,7 +11,7 @@ public class GuitarTest {
 
     @Before
     public void before() throws Exception {
-        guitar = new Guitar("Wood", GuitarType.ELECTRICSIXSTRING);
+        guitar = new Guitar("Wood", "White", GuitarType.ELECTRICSIXSTRING);
     }
 
     @Test
@@ -32,5 +32,10 @@ public class GuitarTest {
     @Test
     public void hasMaterial() {
         assertEquals("Wood", guitar.getMaterial());
+    }
+
+    @Test
+    public void hasColour() {
+        assertEquals("White", guitar.getColour());
     }
 }
