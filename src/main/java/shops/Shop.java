@@ -1,6 +1,7 @@
 package shops;
 
 import items.ISell;
+import items.accessories.DrumSticks;
 
 import java.util.ArrayList;
 
@@ -24,5 +25,10 @@ public class Shop {
 
     public void addStock(ISell product) {
         stock.add(product);
+    }
+
+
+    public void removeStock(DrumSticks product) {
+        stock.remove(product);
     }
 }
