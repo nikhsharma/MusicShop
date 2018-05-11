@@ -35,6 +35,10 @@ public class Shop {
         return money;
     }
 
+    public void AddToMoney(Double amount) {
+        this.money += amount;
+    }
+
     public void removeStock(DrumSticks product) {
         stock.remove(product);
     }

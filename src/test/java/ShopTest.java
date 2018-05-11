@@ -70,8 +70,13 @@ public class ShopTest {
     }
 
     @Test
-
     public void canGetMoney() {
         assertEquals(0.0, shop.getMoney(), 0.1);
+    }
+
+    @Test
+    public void canAddToMoney() {
+        shop.AddToMoney(10.0);
+        assertEquals(10.0, shop.getMoney(), 0.1);
     }
 }
