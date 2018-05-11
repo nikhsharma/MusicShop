@@ -14,10 +14,10 @@ You will need to:
 4. Create a ISell interface which has a calculateMarkup method, which returns an int/double, based on the buying price and the selling price.
 
 5. Create classes for items the shop may sell, i.e. which implement the ISell interface. Such items should have the following:
+- a type/description e.g. guitar, drum sticks, guitar strings, sheet music etc.
+- a price at which the shop bought the item.
+- a price at which the shop plans to sell the item.
 
-a type/description e.g. guitar, drum sticks, guitar strings, sheet music etc.
-a price at which the shop bought the item.
-a price at which the shop plans to sell the item.
 Some ISell items will be musical instruments i.e. instruments can be both IPlay and ISell.
 
 6. Create a Shop class, which has a collection of ISell items, called stock. In your shop you should be able to:
