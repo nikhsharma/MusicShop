@@ -1,7 +1,10 @@
 package instruments.pianos;
 
-public class Piano {
-    PianoType type;
+import instruments.Instrument;
+
+public class Piano extends Instrument {
+
+    private PianoType type;
 
     public Piano(PianoType type) {
         this.type = type;

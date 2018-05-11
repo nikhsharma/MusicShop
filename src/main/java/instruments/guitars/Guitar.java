@@ -1,8 +1,10 @@
 package instruments.guitars;
 
-public class Guitar {
+import instruments.Instrument;
+
+public class Guitar extends Instrument {
     
-    GuitarType type;
+    private GuitarType type;
 
     public Guitar(GuitarType type) {
         this.type = type;
