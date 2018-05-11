@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MusicShop.iml" filepath="$PROJECT_DIR$/.idea/modules/MusicShop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MusicShop_main.iml" filepath="$PROJECT_DIR$/.idea/modules/MusicShop_main.iml" group="MusicShop" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MusicShop_test.iml" filepath="$PROJECT_DIR$/.idea/modules/MusicShop_test.iml" group="MusicShop" />
     </modules>
   </component>
 </project>
