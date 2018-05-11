@@ -1,7 +1,6 @@
 package shops;
 
 import items.ISell;
-import items.Item;
 import items.accessories.DrumSticks;
 
 import java.util.ArrayList;
@@ -10,10 +9,12 @@ public class Shop {
 
     private String name;
     private ArrayList<ISell> stock;
+    private ArrayList<ISell> sold;
 
     public Shop(String name) {
         this.name = name;
         stock = new ArrayList<>();
+        sold = new ArrayList<>();
     }
 
     public String getName() {
@@ -39,5 +40,14 @@ public class Shop {
             potentialProfit += product.calculateMarkup();
         }
         return potentialProfit;
+    }
+
+    public int soldCount() {
+        return sold.size();
+    }
+
+    public void sellProduct(ISell product) {
+        stock.remove(product);
+        sold.add(product);
     }
 }

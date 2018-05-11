@@ -50,4 +50,13 @@ public class ShopTest {
         shop.addStock(guitar);
         assertEquals(8.0, shop.calculateTotalPotentialProfit(), 0.1);
     }
+
+    @Test
+    public void canSellProduct() {
+        shop.addStock(sticks);
+        shop.addStock(guitar);
+        shop.sellProduct(sticks);
+        assertEquals(1, shop.stockCount());
+        assertEquals(1, shop.soldCount());
+    }
 }
