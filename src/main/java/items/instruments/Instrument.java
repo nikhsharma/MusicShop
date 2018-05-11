@@ -1,6 +1,6 @@
 package items.instruments;
 
-public abstract class Instrument {
+public abstract class Instrument implements IPlay {
 
     private String material;
     private String colour;
