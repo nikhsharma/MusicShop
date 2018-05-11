@@ -89,7 +89,7 @@ public class Shop {
 
     public Double endOfDay() {
         Double income = calculateIncome();
-        this.money += income;
+        addToMoney(income);
         this.sold.clear();
         return income;
     }
