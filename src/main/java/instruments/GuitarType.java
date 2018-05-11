@@ -14,8 +14,4 @@ public enum GuitarType {
     GuitarType(int numberOfStrings) {
         this.numberOfStrings = numberOfStrings;
     }
-
-    public int getNumberOfStrings() {
-        return numberOfStrings;
-    }
 }

@@ -15,4 +15,8 @@ public class Guitar {
     public GuitarType getType() {
         return type;
     }
+
+    public int getNumberOfStrings() {
+        return type.numberOfStrings;
+    }
 }
