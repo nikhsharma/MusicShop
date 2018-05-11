@@ -34,12 +34,20 @@ public class Shop {
         stock.remove(product);
     }
 
-    public double calculateTotalPotentialProfit() {
+    public Double calculateTotalPotentialProfit() {
         Double potentialProfit = 0.0;
         for (ISell product : stock) {
             potentialProfit += product.calculateMarkup();
         }
         return potentialProfit;
+    }
+
+    public Double calculateTotalProfit() {
+        Double profit = 0.0;
+        for (ISell product : sold) {
+            profit += product.calculateMarkup();
+        }
+        return profit;
     }
 
     public int soldCount() {
