@@ -13,4 +13,9 @@ public abstract class Item {
     public Double getBuyPrice() {
         return buyPrice;
     }
+
+    public Double getSellPrice() {
+        return sellPrice;
+    }
 }
+
