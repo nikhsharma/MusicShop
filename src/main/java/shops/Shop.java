@@ -10,11 +10,13 @@ public class Shop {
     private String name;
     private ArrayList<ISell> stock;
     private ArrayList<ISell> sold;
+    private Double money;
 
     public Shop(String name) {
         this.name = name;
-        stock = new ArrayList<>();
-        sold = new ArrayList<>();
+        this.stock = new ArrayList<>();
+        this.sold = new ArrayList<>();
+        this.money = 0.0;
     }
 
     public String getName() {
@@ -29,6 +31,9 @@ public class Shop {
         stock.add(product);
     }
 
+    public Double getMoney() {
+        return money;
+    }
 
     public void removeStock(DrumSticks product) {
         stock.remove(product);

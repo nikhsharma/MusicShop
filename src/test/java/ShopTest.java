@@ -68,4 +68,10 @@ public class ShopTest {
         shop.sellProduct(guitar);
         assertEquals(8.0, shop.calculateTotalProfit(), 0.1);
     }
+
+    @Test
+
+    public void canGetMoney() {
+        assertEquals(0.0, shop.getMoney(), 0.1);
+    }
 }
