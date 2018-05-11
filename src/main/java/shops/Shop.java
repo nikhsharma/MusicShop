@@ -35,8 +35,16 @@ public class Shop {
         return money;
     }
 
-    public void AddToMoney(Double amount) {
+    public void addToMoney(Double amount) {
         this.money += amount;
+    }
+
+    public Double withdrawMoney(Double amount) {
+        if (money > amount) {
+            this.money -= amount;
+            return amount;
+        }
+        return null;
     }
 
     public void removeStock(DrumSticks product) {

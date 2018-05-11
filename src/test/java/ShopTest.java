@@ -76,7 +76,16 @@ public class ShopTest {
 
     @Test
     public void canAddToMoney() {
-        shop.AddToMoney(10.0);
+        shop.addToMoney(10.0);
         assertEquals(10.0, shop.getMoney(), 0.1);
     }
+
+    @Test
+    public void canWithdrawMoney() {
+        shop.addToMoney(10.0);
+        assertEquals(5.0, shop.withdrawMoney(5.0), 0.1);
+        assertEquals(5.0, shop.getMoney(), 0.1);
+    }
+
+
 }
