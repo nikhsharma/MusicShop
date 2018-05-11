@@ -1,4 +1,6 @@
 import items.accessories.DrumSticks;
+import items.instruments.guitars.Guitar;
+import items.instruments.guitars.GuitarType;
 import org.junit.Before;
 import org.junit.Test;
 import shops.Shop;
@@ -9,11 +11,13 @@ public class ShopTest {
 
     Shop shop;
     DrumSticks sticks;
+    Guitar guitar;
 
     @Before
     public void before() throws Exception {
         shop = new Shop("Music Shop");
-        sticks = new DrumSticks(5.0, 10.0, "Pair of drum sticks.");
+        guitar = new Guitar("Wood", "Black", GuitarType.ACOUSTICSIXSTRING, 5.0, 10.0, "Black acoustic guitar.");
+        sticks = new DrumSticks(2.0, 5.0, "Pair of drum sticks.");
     }
 
     @Test
@@ -35,8 +39,15 @@ public class ShopTest {
     @Test
     public void canRemoveStock() {
         shop.addStock(sticks);
-        shop.addStock(sticks);
+        shop.addStock(guitar);
         shop.removeStock(sticks);
         assertEquals(1, shop.stockCount());
+    }
+
+    @Test
+    public void canCalculateTotalPotentialProfit() {
+        shop.addStock(sticks);
+        shop.addStock(guitar);
+        assertEquals(8.0, shop.calculateTotalPotentialProfit(), 0.1);
     }
 }

@@ -1,6 +1,7 @@
 package shops;
 
 import items.ISell;
+import items.Item;
 import items.accessories.DrumSticks;
 
 import java.util.ArrayList;
@@ -30,5 +31,13 @@ public class Shop {
 
     public void removeStock(DrumSticks product) {
         stock.remove(product);
+    }
+
+    public double calculateTotalPotentialProfit() {
+        Double potentialProfit = 0.0;
+        for (ISell product : stock) {
+            potentialProfit += product.calculateMarkup();
+        }
+        return potentialProfit;
     }
 }
