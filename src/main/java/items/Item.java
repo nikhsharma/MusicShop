@@ -1,6 +1,6 @@
 package items;
 
-public abstract class Item {
+public abstract class Item implements ISell {
     
     Double buyPrice;
     Double sellPrice;
@@ -22,6 +22,10 @@ public abstract class Item {
 
     public String getDescription() {
         return description;
+    }
+
+    public Double calculateMarkup() {
+        return sellPrice - buyPrice;
     }
 }
 

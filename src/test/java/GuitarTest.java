@@ -59,4 +59,9 @@ public class GuitarTest {
     public void hasDescription() {
         assertEquals("White Fender Telecaster.", guitar.getDescription());
     }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(5.00, guitar.calculateMarkup(), 0.1);
+    }
 }

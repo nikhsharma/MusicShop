@@ -54,4 +54,9 @@ public class PianoTest {
     public void hasDescription() {
         assertEquals("Black Steinway grand piano.", piano.getDescription());
     }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(5.00, piano.calculateMarkup(), 0.1);
+    }
 }

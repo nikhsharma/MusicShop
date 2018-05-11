@@ -27,4 +27,9 @@ public class AccessoryTest {
     public void hasDescription() {
         assertEquals("Ernie Ball 9's", strings.getDescription());
     }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(5.00, strings.calculateMarkup(), 0.1);
+    }
 }
