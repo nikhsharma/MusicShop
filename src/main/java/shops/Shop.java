@@ -85,8 +85,10 @@ public class Shop {
         sold.add(product);
     }
 
-    public void endOfDay() {
-        this.money += calculateIncome();
+    public Double endOfDay() {
+        Double income = calculateIncome();
+        this.money += income;
         this.sold.clear();
+        return income;
     }
 }

@@ -92,7 +92,7 @@ public class ShopTest {
         shop.addStock(sticks);
         shop.addStock(guitar);
         shop.sellProduct(sticks);
-        shop.endOfDay();
+        assertEquals(5.0, shop.endOfDay(), 0.1);
         assertEquals(0, shop.soldCount());
         assertEquals(1, shop.stockCount());
         assertEquals(5.0, shop.getMoney(), 0.1);
