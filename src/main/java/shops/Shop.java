@@ -1,8 +1,8 @@
 package shops;
 
+
 import items.ISell;
 import items.Item;
-import items.accessories.DrumSticks;
 
 import java.util.ArrayList;
 
@@ -48,32 +48,20 @@ public class Shop {
         return null;
     }
 
-    public void removeStock(DrumSticks product) {
+    public void removeStock(ISell product) {
         stock.remove(product);
     }
 
     public Double calculateTotalPotentialProfit() {
-        Double potentialProfit = 0.0;
-        for (ISell product : stock) {
-            potentialProfit += product.calculateMarkup();
-        }
-        return potentialProfit;
+        return loopThroughProducts(stock, "markup");
     }
 
     public Double calculateTotalProfit() {
-        Double profit = 0.0;
-        for (ISell product : sold) {
-            profit += product.calculateMarkup();
-        }
-        return profit;
+        return loopThroughProducts(sold, "markup");
     }
 
-    public Double calculateIncome() {
-        Double income = 0.0;
-        for (ISell product : sold) {
-             income += ((Item) product).getSellPrice();
-        }
-        return income;
+    private Double calculateIncome() {
+        return loopThroughProducts(sold, "sellprice");
     }
 
     public int soldCount() {
@@ -92,5 +80,21 @@ public class Shop {
         addToMoney(income);
         this.sold.clear();
         return income;
+    }
+
+    private Double loopThroughProducts(ArrayList<ISell> products, String method) {
+        Double total = 0.0;
+        for (ISell product : products) {
+            if ((!method.equals("markup")) && !method.equals("sellprice")) {
+                return null;
+            }
+            if (method.equals("markup")) {
+                total += product.calculateMarkup();
+            }
+            if (method.equals("sellprice")) {
+                total += ((Item) product).getSellPrice();
+            }
+        }
+        return total;
     }
 }
