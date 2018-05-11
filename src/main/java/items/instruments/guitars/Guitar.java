@@ -1,7 +1,7 @@
-package instruments.guitars;
+package items.instruments.guitars;
 
-import instruments.Instrument;
-import instruments.InstrumentFamily;
+import items.instruments.Instrument;
+import items.instruments.InstrumentFamily;
 
 public class Guitar extends Instrument {
     

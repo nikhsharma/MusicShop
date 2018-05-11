@@ -1,4 +1,4 @@
-package instruments.guitars;
+package items.instruments.guitars;
 
 public enum GuitarType {
 

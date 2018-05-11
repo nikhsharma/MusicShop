@@ -1,4 +1,4 @@
-package instruments;
+package items.instruments;
 
 public enum InstrumentFamily {
     BOWEDSTRINGS,

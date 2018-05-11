@@ -1,4 +1,4 @@
-package instruments.pianos;
+package items.instruments.pianos;
 
 public enum PianoType {
     UPRIGHT,

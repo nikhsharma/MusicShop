@@ -1,6 +1,6 @@
-import instruments.InstrumentFamily;
-import instruments.pianos.Piano;
-import instruments.pianos.PianoType;
+import items.instruments.InstrumentFamily;
+import items.instruments.pianos.Piano;
+import items.instruments.pianos.PianoType;
 import org.junit.Before;
 import org.junit.Test;
 

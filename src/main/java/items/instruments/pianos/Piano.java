@@ -1,7 +1,7 @@
-package instruments.pianos;
+package items.instruments.pianos;
 
-import instruments.Instrument;
-import instruments.InstrumentFamily;
+import items.instruments.Instrument;
+import items.instruments.InstrumentFamily;
 
 public class Piano extends Instrument {
 
